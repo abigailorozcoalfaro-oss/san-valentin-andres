@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Andrés 💖</title>
+  <style>
+    body {
+      background: linear-gradient(#ffd6e8, #fff);
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+      padding: 40px;
+    }
+    h1 {
+      color: #ff4d88;
+      font-size: 32px;
+    }
+    p {
+      font-size: 20px;
+      color: #444;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+    }
+    .yes {
+      background-color: #ff4d88;
+      color: white;
+    }
+    .no {
+      background-color: #aaa;
+      color: white;
+      position: absolute;
+    }
+    #respuesta {
+      margin-top: 30px;
+      font-size: 24px;
+      color: #ff1a66;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💘 Andrés 💘</h1>
+  <p>
+    Desde que llegaste a mi vida,<br>
+    todo es más bonito 💞<br><br>
+    ¿Quieres ser mi San Valentín? 😘
+  </p>
+
+  <button class="yes" onclick="si()">Sí 💖</button>
+  <button class="no" id="noBtn" onmouseover="mover()">No 🙄</button>
+
+  <div id="respuesta"></div>
+
+  <script>
+    function si() {
+      document.getElementById("respuesta").innerHTML =
+        "Sabía que dirías que sí 😍💍<br>Te amo muchísimo ❤️";
+    }
+
+    function mover() {
+      const btn = document.getElementById("noBtn");
+      btn.style.top = Math.random() * 80 + "%";
+      btn.style.left = Math.random() * 80 + "%";
+    }
+  </script>
+
+</body>
+</html>
