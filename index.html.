@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Andrés 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #ffe6f0, #fff);
+      text-align: center;
+      color: #444;
+    }
+
+    .portada {
+      position: relative;
+    }
+
+    .portada img {
+      width: 100%;
+      max-height: 90vh;
+      object-fit: cover;
+      filter: brightness(0.85);
+    }
+
+    .texto-portada {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.35);
+      color: white;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 90%;
+    }
+
+    h1 {
+      font-size: 32px;
+      color: #ffccd5;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      background: #ff4d88;
+      color: white;
+      cursor: pointer;
+    }
+
+    section {
+      display: none;
+      padding: 40px 20px;
+      animation: aparecer 1.2s ease;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 500px;
+      margin: 20px auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PORTADA -->
+  <div class="portada">
+    <img src="foto1" alt="Nosotros">
+    <div class="texto-portada">
+      <h1>Andrés 💖</h1>
+      <p>
+        Aquí entendí que el amor también se ve así:<br>
+        simple, sincero… y contigo.
+      </p>
+      <button onclick="mostrar()">Toca aquí 💕</button>
+    </div>
+  </div>
+
+  <!-- CONTENIDO -->
+  <section id="contenido">
+    <div class="card">
+      <h2>💗 Por qué tú</h2>
+      <p>
+        Porque me haces sentir en casa.<br>
+        Porque contigo todo se siente más fácil.<br>
+        Porque sin buscarlo, te volviste mi lugar seguro.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>💍 La pregunta importante</h2>
+      <p>
+        ¿Quieres seguir siendo mi persona favorita<br>
+        hoy, mañana y todos los días?
+      </p>
+      <button onclick="final()">Sí, obvio ❤️</button>
+    </div>
+  </section>
+
+  <!-- FINAL -->
+  <section id="final">
+    <div class="card">
+      <h2>❤️ Gracias por elegirnos ❤️</h2>
+      <p>
+        No prometo perfección,<br>
+        pero sí amor, apoyo y muchas risas contigo.<br><br>
+        Te amo 💕
+      </p>
+    </div>
+  </section>
+
+  <script>
+    function mostrar() {
+      document.getElementById("contenido").style.display = "block";
+      window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+    }
+
+    function final() {
+      document.getElementById("final").style.display = "block";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
